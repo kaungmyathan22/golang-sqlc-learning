@@ -44,5 +44,12 @@ func main() {
 	// 	log.Printf("error occur while updating author with id %d\n", 1)
 	// 	panic(err)
 	// }
+	err = queries.DeleteAuthor(ctx, 1)
+	if err != nil {
+		log.Printf("error occur while deleting author with id %d\n", 1)
+		panic(err)
+	} else {
+		log.Println("successfully deleted author")
+	}
 	log.Println("successfully connected to database!!!")
 }
